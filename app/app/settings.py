@@ -25,7 +25,7 @@ SECRET_KEY = 'j$zin@09jv9k*r-0#e-7%2w1#4b15#-_edbg$&8zt9*m!%m29^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'react-trax.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'react-trax.herokuapp.com', 'peaceful-ridge-48819.herokuapp.com/']
 
 
 # Application definition
