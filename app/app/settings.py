@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 # import django_heroku
+import os
 from pathlib import Path
 import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -39,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'graphene_django',
     'tracks',
 ]
@@ -105,9 +105,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'Cluster0',
-        'HOST': "mongodb+srv://admin:Skye2021@cluster0.uzvyu.mongodb.net/Cluster0?retryWrites=true&w=majority",
-        'USER': 'admin',
-        'PASSWORD': 'Skye2021'
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': "mongodb+srv://admin:Skye2021@cluster0.uzvyu.mongodb.net/Cluster0?retryWrites=true&w=majority",
+            'port': 27017,
+            'username': 'admin',
+            'password': 'Skye2021'
+        }
+        
     }
 }
 
