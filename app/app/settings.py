@@ -103,8 +103,11 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'Cluster0',
+        'HOST': "mongodb+srv://admin:Skye2021@cluster0.uzvyu.mongodb.net/Cluster0?retryWrites=true&w=majority",
+        'USER': 'admin',
+        'PASSWORD': 'Skye2021'
     }
 }
 
