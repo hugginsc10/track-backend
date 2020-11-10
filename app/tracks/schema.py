@@ -60,7 +60,7 @@ class DeleteTrack(graphene.Mutation):
     track = Track.objects.get(id=track_id)
       
     if track.posted_by != user:
-      raise GraphQLError('Not permitted to delte this track')
+      raise GraphQLError('Not permitted to delete this track')
     
     track.delete()
     return DeleteTrack(track_id=track_id)
